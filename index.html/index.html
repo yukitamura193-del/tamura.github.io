@@ -2,10 +2,179 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>私のホームページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>田村のプロフィール</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            border-left: 5px solid #1a365d;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .profile-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid #1a365d;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+        }
+        .profile-box dt {
+            font-weight: bold;
+            color: #1a365d;
+            margin-top: 10px;
+        }
+        .profile-box dd {
+            margin-left: 0;
+            margin-bottom: 15px;
+        }
+        
+        /* 研究セクション用のスタイル */
+        .research-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1a365d;
+            margin-bottom: 5px;
+        }
+        .research-sub {
+            font-style: italic;
+            color: #777;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+        .research-item {
+            margin-bottom: 20px;
+        }
+        .research-label {
+            font-weight: bold;
+            color: #1a365d;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .pub-year {
+            font-weight: bold;
+            color: #1a365d;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .pub-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        .pub-authors {
+            margin: 5px 0;
+        }
+        .pub-journal {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .pub-status {
+            color: #888;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        .contact-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .contact-label {
+            font-weight: bold;
+            color: #1a365d;
+            margin-bottom: 5px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 40px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>はじめてのウェブサイトが完成しました！</p>
+
+    <h2 class="section-title">Profile</h2>
+    <div class="profile-box">
+        <dl>
+            <dt>氏名</dt>
+            <dd>田村 祐樹</dd>
+            
+            <dt>所属</dt>
+            <dd>日本大学大学院 理工学研究科 電子工学専攻</dd>
+            
+            <dt>学年</dt>
+            <dd>修士1年</dd>
+            
+            <dt>研究室</dt>
+            <dd>高橋研究室</dd>
+        </dl>
+    </div>
+
+    <hr>
+
+    <h2 class="section-title">Research</h2>
+    <div class="research-content">
+        <p style="color: #aa9999; font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 5px;">RESEARCH 01</p>
+        <div class="research-title">純水中における電圧無印加基板に対する陽極酸化</div>
+        <div class="research-sub">Anodic Oxidation for Voltage-Unapplied Substrates in Pure Water</div>
+        
+        <div class="research-item">
+            <div class="research-label">研究背景</div>
+            <p>
+                従来の熱処理による成膜（熱酸化膜形成）では、高温プロセスによる半導体基板への熱ダメージや、使用できる基板材料が制限される点が課題となっています。これを解決するため、室温環境下での成膜が可能である「純水中での酸化膜形成」に着目し、研究を行っています。
+            </p>
+        </div>
+
+        <div class="research-item">
+            <div class="research-label">研究目的</div>
+            <p>
+                従来の陽極酸化法は、電圧を印加する極板自体に成膜対象のシリコン基板を用いていたため、交流波形を用いた場合でも同時に最大2枚までしか成膜できないという効率上の限界がありました。本研究では、極板に白金線を用いて電圧を印加し、純水中に成膜対象のシリコン基板を浸漬させることで、**複数枚の基板を同時に無印加で成膜できる新しい手法**を提案しています。この手法で成膜したMOS構造基板の電気的特性を詳細に検討し、プロセスの最適化を目指します。
+            </p>
+        </div>
+
+        <div class="research-item">
+            <div class="research-label">実験手法</div>
+            <p>
+                11mm平方にカットしたシリコン基板をフッ酸（HF）にて洗浄し、表面の自然酸化膜を除去します。次に、純水中に配置した白金線に±900Vの方形波を30分間印加し、そこに浸漬させたシリコン基板表面に陽極酸化膜を形成します。成膜後、真空蒸着法を用いて酸化膜上に金属電極を形成してMOS構造を作製し、完成した基板の電気的特性（C-V特性など）を測定・評価します。
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 class="section-title">Publications</h2>
+    <div class="pub-content">
+        <div class="pub-year">2026 (予定)</div>
+        <div class="pub-title">純水中における電圧無印加基板に対する陽極酸化膜</div>
+        <div class="pub-authors"><strong>田村 祐樹 </div>
+        <div class="pub-journal">日本大学理工学部 学術講演会</div>
+        <div class="pub-status">発表予定</div>
+    </div>
+
+    <hr>
+
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-content">
+        <div class="contact-item">
+            <div class="contact-label">Email</div>
+            <div>csyu26005@g.nihon-u.ac.jp</div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-label">GitHub</div>
+            <div><a href="https://github.com/tamura" target="_blank">https://github.com/tamura</a></div>
+        </div>
+    </div>
+
 </body>
 </html>
